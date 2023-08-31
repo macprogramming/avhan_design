@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/avhan_design/static/css/main.bed98bb9.css",
+    "main.js": "/avhan_design/static/js/main.0e415698.js",
+    "static/js/787.2a1aeab5.chunk.js": "/avhan_design/static/js/787.2a1aeab5.chunk.js",
+    "static/media/icon-phone.svg": "/avhan_design/static/media/icon-phone.8fcae1060485769cc5be4e8e1187cf74.svg",
+    "static/media/icon-chat.svg": "/avhan_design/static/media/icon-chat.73564d05eae13a2027d03e4b21cabdf6.svg",
+    "static/media/user_icon.png": "/avhan_design/static/media/user_icon.d9ac48a8ed0a48fdccaf.png",
+    "static/media/sm_video.svg": "/avhan_design/static/media/sm_video.bc79fca6dc2fb0bdae9075bd9d6602cb.svg",
+    "static/media/company_logo.png": "/avhan_design/static/media/company_logo.98d1c07ad44f14092654.png",
+    "static/media/icon-video.svg": "/avhan_design/static/media/icon-video.91d4e74f553dc9994db34db8bdff8efd.svg",
+    "static/media/logo.svg": "/avhan_design/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/avhan_design/index.html",
+    "static/media/video.svg": "/avhan_design/static/media/video.5eb462e2028be2d59d881ebbbee173b1.svg",
+    "main.bed98bb9.css.map": "/avhan_design/static/css/main.bed98bb9.css.map",
+    "main.0e415698.js.map": "/avhan_design/static/js/main.0e415698.js.map",
+    "787.2a1aeab5.chunk.js.map": "/avhan_design/static/js/787.2a1aeab5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bed98bb9.css",
+    "static/js/main.0e415698.js"
+  ]
+}
