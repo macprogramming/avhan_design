@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,208 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+:root{
+  --color-primary: #4791D6;
+  --color-secondary: #F93439;
+  --color-black: #333333;
+  --color-light-gray: #A48181;
+}
+html, body{
+  background-color: #EBEFF1;
+}
+/* text-color */
+.text-custom-primary{
+  color: var(--color-primary)!important;
+}
+.text-custom-secondary{
+  color: var(--color-secondary)!important;
+}
+#sidebar{
+  float: left;
+  width: calc(100% - 96%);
+  height: 100vh;
+}
+
+.main-container{
+  padding-left: 80px;
+}
+.c_logo{
+  width: 280px;
+  height: 280px;
+}
+.user_logo{
+  width: 280px;
+  height: 280px;
+  filter: grayscale();
+}
+.icon_logo{
+  width: 50px;
+  height: 50px;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 40px!important;
+  width: 100%;
+}
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 40px!important;
+}
+.vIcon-group{
+  position: relative;
+}
+.v-icon{
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  left: 45%;
+  bottom: 50%;
+}
+.custom-border-radius{
+  border-radius: 30px!important;
+  box-shadow: none!important;
+  border: 1px solid var(--color-light-gray);
+}
+.css-1m5i5w0-MuiButtonBase-root-MuiListItemButton-root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.css-wa5fuu-MuiListItemIcon-root{
+  margin-right: 0px!important;
+}
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper{
+  background-color: #EBEFF1!important;
+}
+
+.switch-button {
+  width: 270px;
+  height: 40px;
+  will-change: transform;
+  z-index: 197 !important;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border: 1px solid white;
+  background: #fff;
+  box-shadow: 0px 0px 3px 2px #e1e1e1;
+  border-radius: 40px;
+  margin-top: 30px;
+}
+.switch-button-case {
+  display: inline-block;
+  background: none;
+  width: 50%;
+  height: 100%;
+  color: #C4C4C4;
+  border: none;
+  transition: 0.3s ease all;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-bottom: 1px;
+}
+.switch-button-case:hover {
+  color: grey;
+  cursor: pointer;
+}
+.switch-button-case:focus {
+  outline: none;
+}
+.switch-button .active {
+  color: #151515;
+  background-color: #C4C4C4;
+  z-index: -1;
+  transition: 0.3s ease-out all;
+}
+.switch-button .active-case {
+  color: #151515;
+  background: #E6E4A5;
+  border-radius: 40px;
+}
+
+.signature {
+  position: fixed;
+  font-family: sans-serif;
+  font-weight: 100;
+  bottom: 10px;
+  left: 0;
+  /* letter-spacing: 4px; */
+  font-size: 10px;
+  width: 100vw;
+  text-align: center;
+  color: #C4C4C4;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.custom-card{
+  background-color: #EBEFF1!important;
+  box-shadow: none!important;
+}
+
+.marginBottom40{
+  margin-bottom: 40px;
+}
+.input-group{
+  position: relative;
+}
+.input-group svg{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /* color: #9c9c9c; */
+}
+.input-group input{
+  padding: 10px 44px;
+}
+.custom-btn{
+  background-color: #003A5B!important;
+  color: #fff!important;
+  border-radius: 40px!important;
+}
+.upload_icon{
+  float: right;
+  position: absolute;
+  right: 25px;
+  z-index: 999;
+  font-size: 20px;
+  padding: 2px;
+  background: #FCB724;
+  color: #fff;
+  border-radius: 50%;
+  top: 25px;
+}
+.upload-btn-wrapper {
+  /* position: relative; */
+  position: absolute;
+  top: 19px;
+  right: 29px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.disabled_feild{
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #C4C4C4!important;
+}
+
+
+
+.upload-btn-wrapper svg{
+  z-index: 999;
+  font-size: 20px;
+  padding: 2px;
+  background: #FCB724;
+  color: #fff;
+  border-radius: 50%;
 }
