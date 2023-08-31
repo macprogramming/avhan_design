@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/avhan_design/static/css/main.3c95f3d4.css",
-    "main.js": "/avhan_design/static/js/main.be5c7013.js",
+    "main.js": "/avhan_design/static/js/main.3bfe0e5d.js",
     "static/js/787.2a1aeab5.chunk.js": "/avhan_design/static/js/787.2a1aeab5.chunk.js",
     "static/media/icon-phone.svg": "/avhan_design/static/media/icon-phone.8fcae1060485769cc5be4e8e1187cf74.svg",
     "static/media/icon-chat.svg": "/avhan_design/static/media/icon-chat.73564d05eae13a2027d03e4b21cabdf6.svg",
@@ -13,11 +13,11 @@
     "index.html": "/avhan_design/index.html",
     "static/media/video.svg": "/avhan_design/static/media/video.5eb462e2028be2d59d881ebbbee173b1.svg",
     "main.3c95f3d4.css.map": "/avhan_design/static/css/main.3c95f3d4.css.map",
-    "main.be5c7013.js.map": "/avhan_design/static/js/main.be5c7013.js.map",
+    "main.3bfe0e5d.js.map": "/avhan_design/static/js/main.3bfe0e5d.js.map",
     "787.2a1aeab5.chunk.js.map": "/avhan_design/static/js/787.2a1aeab5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c95f3d4.css",
-    "static/js/main.be5c7013.js"
+    "static/js/main.3bfe0e5d.js"
   ]
 }
