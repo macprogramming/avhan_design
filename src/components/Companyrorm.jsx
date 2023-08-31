@@ -41,6 +41,8 @@ import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addCompany } from '../redux/slice/company'; 
 
 const drawerWidth = 160;
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -134,8 +136,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Companyrorm = () => {
   // const location = useLocation();
-  const navigate = useNavigate()
-  console.log(navigate)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isToggle, setIstoggle] = useState(false);
 
   const theme = useTheme();
@@ -147,10 +149,6 @@ const Companyrorm = () => {
     setOpen(!open);
   };
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };  
-
   const toggleButtton = () => {
     setIstoggleButton(!isTogglebtn)
   }
@@ -158,6 +156,41 @@ const Companyrorm = () => {
     // location.go('/hello')
     navigate('/dashboard')
   }
+
+  const [compayData, setCompanyData] = useState({
+    companyName: '',
+    companyBPP: '',
+    companyDepartment: [],
+    companyContact: ''
+  })
+
+  const handleChange = (event) => {
+    
+    let {companyName, companyBPP, companyDepartment, companyContact } = compayData;
+    if(event.target.id === 'companyName'){
+      companyName = event.target.value
+    } else if (event.target.id === 'companyBPP') {
+      companyBPP = event.target.value
+    } else if (event.target.name === 'companyDepartment') {
+      // if (event.target.value) {
+        companyDepartment.push(event.target.value)
+      // }
+    } else if (event.target.name === 'companyContact') {
+      companyContact = event.target.value
+    }
+    setCompanyData({
+      companyName,
+      companyBPP,
+      companyDepartment,
+      companyContact
+    })
+  };  
+
+  const submitCompanyData = () => {
+    console.log(compayData)
+    dispatch(addCompany(compayData));
+  }
+
   return(
     <>
       <Box sx={{ display: 'flex' }}>
@@ -417,14 +450,14 @@ const Companyrorm = () => {
               fullWidth
               style={{ padding : '0px 60px'}}
             >
-              <TextField id="outlined-basic" label="Company Name" fullWidth size='small' variant="outlined" />
-              <TextField id="outlined-basic" label="Company BPP" fullWidth size='small' variant="outlined" />
+              <TextField label="Company Name" id="companyName" value={compayData.companyName} onChange={handleChange} fullWidth size='small' variant="outlined" />
+              <TextField label="Company BPP" id="companyBPP" value={compayData.companyBPP} onChange={handleChange} fullWidth size='small' variant="outlined" />
               <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }} className={`${!isTogglebtn ? '' : 'disabled_feild'} `}>
                 <InputLabel id="demo-simple-select-standard-label">Department</InputLabel>
                 <Select
                   labelId="demo-simple-select-standard-label"
-                  id="demo-simple-select-standard"
-                  value={age}
+                  name="companyDepartment"
+                  value={compayData.companyDepartment}
                   onChange={handleChange}
                   label="Department"
                 >
@@ -439,8 +472,8 @@ const Companyrorm = () => {
                 <InputLabel id="demo-simple-select-standard-label">Contacts</InputLabel>
                 <Select
                   labelId="demo-simple-select-standard-label"
-                  id="demo-simple-select-standard"
-                  value={age}
+                  name="companyContact"
+                  value={compayData.companyContact}
                   onChange={handleChange}
                   label="Department"
                 >
@@ -452,7 +485,22 @@ const Companyrorm = () => {
                 </Select>
               </FormControl>
             </Box>
-            <Button variant="contained" className='custom-btn' style={{ float: 'right' }} size='small'>Save</Button>
+            <div>
+              {compayData.companyDepartment !== [] &&
+                <>
+                  <div style={{ marginLeft: '67px', marginTop: '10px' }}>
+                  {compayData.companyDepartment.map((ele) => {
+                    return(
+                      <>
+                        <Button variant="outlined" className='rounded-button'>{ele}</Button>&nbsp;
+                      </>
+                    )
+                  })}
+                  </div>
+                </>
+              }
+            </div>
+            <Button variant="contained" className='custom-btn' style={{ float: 'right' }} size='small' onClick={submitCompanyData}>Save</Button>
           </Grid>
           <Grid item xs={12} md={4}>
             <Card className='custom-card marginBottom40'>

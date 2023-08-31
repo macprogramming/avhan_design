@@ -23,9 +23,16 @@ import icon_chat from '../assets/icon-chat.svg'
 import video_sm from '../assets/sm_video.svg'
 import video from '../assets/video.svg'
 import TextField from '@mui/material/TextField';
-
+import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
+
+  const companyData = useSelector((state) => {
+    return state.companyData.companyProductSlice.data;
+  });
+
+  // console.log(companyData.companyName)
+  // console.log(companyData.companyBPP)
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -62,18 +69,18 @@ const Sidebar = () => {
                 className="c_logo"
               />
               <CardContent className='textLeft'>
-                <Typography sx={{ fontSize: '48px', margin: '0px' }} color="#F93439" fontWeight='700' className='boder_bottom_li' >
-                  User Name
+                <Typography sx={{ fontSize: '36px', margin: '0px' }} color="#F93439" fontWeight='700' className='boder_bottom_li' >
+                  Makarand Chikhale
                 </Typography>
                 <Typography sx={{ mb: 1.5 , mt: 1.5, fontWeight: '700' }} color="#333333" fontSize='32px'>
                   Title
                 </Typography>
-                <Typography variant="body2" display={'flex'} justifyContent='space-between' color="#333333" fontSize='24px'>
+                <Typography variant="body2" display={'flex'} justifyContent='space-between' color="#333333" fontSize='20px'>
                   <div>department   -  </div>
-                  <div>Department Value</div>
+                  <div>{companyData !== null ? <>{companyData.companyDepartment} ,</> : ''}</div>
                 </Typography><br /><br /><br />
                 <Typography sx={{ mb: 0 , mt: 1.5, fontWeight: '700' }} color="#333333" fontSize='36px'>
-                  Compay Name
+                  {companyData !== null ? companyData.companyName : ''}
                 </Typography>
                 <div sx={{ fontWeight: '600' }} color="#333333" fontSize='24px' fontWeight='600'>
                   Address 1

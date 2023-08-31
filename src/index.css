@@ -221,3 +221,9 @@ html, body{
   color: #fff;
   border-radius: 50%;
 }
+.rounded-button{
+  border-radius: 10px!important;
+  background-color: #fff!important;
+  border: none!important;
+  box-shadow: 1px 1px 1px rgb(235, 235, 235)!important;
+}
