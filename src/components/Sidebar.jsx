@@ -45,7 +45,7 @@ const Sidebar = () => {
   return(
     <>
       <Box>
-        <AppBar position="fixed" color="primary" sx={{ right: 'auto', left: 0 }} id="sidebar">
+        <AppBar position="fixed" color="primary" sx={{ right: 'auto', left: 0 }} id="sidebar1">
           <Toolbar>
             <Box sx={{ flexGrow: 1 }} />
           </Toolbar>
