@@ -40,6 +40,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const drawerWidth = 160;
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -132,34 +133,30 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Companyrorm = () => {
-  const [isToggle, setIstoggle] = useState(false);
-  // const [userData, setUserData] = useState(data)
   // const location = useLocation();
-  const toggleMenu = () => {
-    setIstoggle(!isToggle)
-  }
+  const navigate = useNavigate()
+  console.log(navigate)
+  const [isToggle, setIstoggle] = useState(false);
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [age, setAge] = React.useState('');
+  const [ isTogglebtn, setIstoggleButton] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(!open);
   };
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
-  const [age, setAge] = React.useState('');
-
   const handleChange = (event) => {
     setAge(event.target.value);
-  };
-
-  const [ isTogglebtn, setIstoggleButton] = useState(false);
+  };  
 
   const toggleButtton = () => {
     setIstoggleButton(!isTogglebtn)
+  }
+  const gotoPage = () => {
+    // location.go('/hello')
+    navigate('/dashboard')
   }
   return(
     <>
@@ -174,6 +171,7 @@ const Companyrorm = () => {
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
+              onClick={gotoPage}
             >
               <ListItemIcon
                 sx={{

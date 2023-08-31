@@ -8,8 +8,8 @@ const Routers = () => {
   return(
     <>
       <Routes>
-        <Route exact index path="/" element={<Sidebar />} />
-        <Route path="/form" element={<Companyrorm />} />
+        <Route exact index path="/" element={<Companyrorm />} />
+        <Route path="/dashboard" element={<Sidebar />} />
       </Routes>
     </>
   )
